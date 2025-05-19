@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un livre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .retour {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ajouter un livre</h1>
+
+    <form id="ajoutForm">
+        <div>
+            <label for="titre">Titre du livre:</label>
+            <input type="text" id="titre" name="titre" required>
+        </div>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <div class="retour">
+        <a href="index.html">Retour au menu principal</a>
+    </div>
+
+    <script src="formulaire.js"></script>
+</body>
+
+</html>

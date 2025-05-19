@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Livres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #livresList {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            display: none;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gestion de Livres</h1>
+
+    <div class="menu">
+        <button id="ajouterBtn">1. Ajouter un livre</button>
+        <button id="afficherBtn">2. Afficher tous les livres</button>
+        <button id="rechercherBtn">3. Rechercher un livre par titre</button>
+        <button id="supprimerBtn">4. Supprimer un livre</button>
+        <button id="quitterBtn">5. Quitter</button>
+    </div>
+
+    <div id="livresList">
+        <h2>Liste des Livres</h2>
+        <ul id="listeLivres"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

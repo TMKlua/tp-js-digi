@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechercher un livre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        #resultats {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        
+        #listeResultats {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .resultat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .resultat-item:last-child {
+            border-bottom: none;
+        }
+        
+        .supprimer-btn {
+            padding: 5px 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .supprimer-btn:hover {
+            background-color: #c82333;
+        }
+        
+        .retour {
+            margin-top: 20px;
+        }
+        
+        .no-results {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rechercher un livre</h1>
+
+    <div class="search-container">
+        <div>
+            <label for="recherche">Recherche par titre:</label>
+            <input type="text" id="recherche" name="recherche">
+        </div>
+    </div>
+
+    <div id="resultats">
+        <h2>Résultats</h2>
+        <ul id="listeResultats"></ul>
+    </div>
+
+    <div class="retour">
+        <a href="index.html">Retour au menu principal</a>
+    </div>
+
+    <script src="recherche.js"></script>
+</body>
+
+</html>
