@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Bibliothèque</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #livresList,
+        #profilUtilisateur,
+        #livresEmpruntes {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            display: none;
+        }
+        
+        .livre-item {
+            border: 1px solid #eee;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        .livre-item button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        
+        .emprunter-btn {
+            background-color: #28a745;
+        }
+        
+        .emprunter-btn:hover {
+            background-color: #218838;
+        }
+        
+        .info-utilisateur {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .utilisateur-switch {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .utilisateur-btn {
+            margin: 0 5px;
+            padding: 8px 12px;
+        }
+        
+        .active-user {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gestion de Bibliothèque</h1>
+
+    <div class="utilisateur-switch">
+        <h3>Choisir un utilisateur:</h3>
+        <button id="bibliothecaireBtn" class="utilisateur-btn active-user">Bibliothécaire</button>
+        <button id="membreBtn" class="utilisateur-btn">Membre</button>
+    </div>
+
+    <div class="menu">
+        <button id="ajouterBtn">1. Ajouter un livre (Bibliothécaire uniquement)</button>
+        <button id="afficherBtn">2. Afficher tous les livres</button>
+        <button id="rechercherBtn">3. Rechercher un livre par titre</button>
+        <button id="supprimerBtn">4. Supprimer un livre (Bibliothécaire uniquement)</button>
+        <button id="voirProfilBtn">5. Voir mon profil</button>
+        <button id="voirEmpruntsBtn">6. Voir mes emprunts (Membre uniquement)</button>
+        <button id="quitterBtn">7. Quitter</button>
+    </div>
+
+    <div id="livresList">
+        <h2>Liste des Livres</h2>
+        <div id="listeLivres"></div>
+    </div>
+
+    <div id="profilUtilisateur">
+        <h2>Profil Utilisateur</h2>
+        <div id="infoUtilisateur" class="info-utilisateur"></div>
+    </div>
+
+    <div id="livresEmpruntes">
+        <h2>Mes Livres Empruntés</h2>
+        <div id="listeEmprunts"></div>
+    </div>
+
+    <script src="classes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
